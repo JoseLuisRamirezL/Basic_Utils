@@ -1,6 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import MenuExerciseOne.MainMenu;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.startMenu();
     }
+
+
 }
