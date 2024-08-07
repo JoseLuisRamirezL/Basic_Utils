@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class StudentAverageMenu{
+public class StudentAverageMenu {
     private final Scanner scanner = new Scanner(System.in);
     private String name;
     private int signatures;
@@ -43,7 +43,7 @@ public class StudentAverageMenu{
         }
     }
 
-    private void printOutput(){
+    private void printOutput() {
         System.out.println();
         System.out.println();
         System.out.println(createLine());
@@ -56,25 +56,24 @@ public class StudentAverageMenu{
                     System.out.printf(format2, signaturesNames[i], signaturesGrades[i]);
                 });
         System.out.println(createLine());
-        if (signatureAverage() <= 5 && signatureAverage() >= 0 ){
-            System.out.printf("Final average: %.2f             Status: Not passed" ,signatureAverage());
-        }
-        else if (signatureAverage() >= 6 && signatureAverage() <= 7 ){
-            System.out.printf("Final average: %.2f             Status: Passed with regular level" ,signatureAverage());
-        } else if (signatureAverage() >= 8 && signatureAverage() <=9) {
-            System.out.printf("Final average: %.2f             Status: Passed with good level" ,signatureAverage());
-        } else if (signatureAverage() > 9 && signatureAverage() <= 10 ) {
+        if (signatureAverage() <= 5 && signatureAverage() >= 0) {
+            System.out.printf("Final average: %.2f             Status: Not passed", signatureAverage());
+        } else if (signatureAverage() >= 6 && signatureAverage() <= 7) {
+            System.out.printf("Final average: %.2f             Status: Passed with regular level", signatureAverage());
+        } else if (signatureAverage() >= 8 && signatureAverage() <= 9) {
+            System.out.printf("Final average: %.2f             Status: Passed with good level", signatureAverage());
+        } else if (signatureAverage() > 9 && signatureAverage() <= 10) {
             System.out.printf("Final average: %.2f             Status: Passed with perfect level", signatureAverage());
         } else {
             System.out.println("Error, you didn't enter values from 1 to 10, back to the main menu...");
         }
     }
 
-    private double signatureAverage(){
+    private double signatureAverage() {
         return Arrays.stream(signaturesGrades).average().getAsDouble();
     }
 
-    private String createLine(){
+    private String createLine() {
         return IntStream.range(0, 70)
                 .mapToObj(i -> "-")
                 .collect(Collectors.joining());
