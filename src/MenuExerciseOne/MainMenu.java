@@ -20,8 +20,8 @@ public class MainMenu {
                     encoderMenu.startEncoder();
                     break;
                 case 3:
-                    // Implement student average calculator functionality
-                    System.out.println("Student average calculator functionality not implemented yet.");
+                    StudentAverageMenu studentAverageMenu = new StudentAverageMenu();
+                    studentAverageMenu.startMenuStudentAverage();
                     break;
                 case 0:
                     exit = true;

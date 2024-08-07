@@ -20,7 +20,7 @@ public class CalculatorMenu extends MainMenu {
             double num1 = scanner.nextDouble();
             System.out.print("Enter second number: ");
             double num2 = scanner.nextDouble();
-            double result = 0;
+            double result;
             switch (choice) {
                 case 1:
                     BiFunction<Double, Double, Double> sum = (a, b) -> a + b;
