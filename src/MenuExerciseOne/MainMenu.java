@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class MainMenu {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public void startMenu() throws InterruptedException {
         boolean exit = false;
@@ -16,8 +16,8 @@ public class MainMenu {
                     calculatorMenu.startCalculator();
                     break;
                 case 2:
-                    // Implement encoder functionality
-                    System.out.println("Encoder functionality not implemented yet.");
+                    EncoderMenu encoderMenu = new EncoderMenu();
+                    encoderMenu.startEncoder();
                     break;
                 case 3:
                     // Implement student average calculator functionality
@@ -53,7 +53,7 @@ public class MainMenu {
         return getUserInput();
     }
 
-    private int getUserInput() {
+    public int getUserInput() {
         while (true) {
             try {
                 return Integer.parseInt(scanner.next());
