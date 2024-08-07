@@ -73,6 +73,7 @@ public class StudentAverageMenu {
         return Arrays.stream(signaturesGrades).average().getAsDouble();
     }
 
+
     private String createLine() {
         return IntStream.range(0, 70)
                 .mapToObj(i -> "-")
